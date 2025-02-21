@@ -16,6 +16,11 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15px;
 }
 
 h1,
@@ -64,38 +69,30 @@ fieldset {
   white-space: nowrap;
 } 
 
-.page {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  margin-left: 390px;
-  margin-top: 15px;
-}
-
 .content {
   display: grid;
   grid-template-columns: auto auto;
   align-items: end;
   min-width: 1140px;
-  max-height: 534px;
   gap: 30px;
 }
 
 .result {
-  max-width: 711px;
+  width: 711px;
 }
 
 .result__video-container {
-  min-width: 711px;
-  max-height: 365px;
-  margin-bottom: 40px;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
   object-fit: cover;
   position: relative;
 }
 
-.result__video {
+video {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .search-form {
@@ -120,6 +117,7 @@ fieldset {
 .search-form__label {
   display: flex;
   width: fit-content;
+  align-items: center;
 }
 
 .search-form__textfield {
@@ -156,7 +154,6 @@ fieldset {
 
 .title {
   max-width: 260px;
-  min-height: 210px;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
@@ -217,18 +214,19 @@ fieldset {
   flex-direction: column;
   gap: 30px;
   overflow-y: auto;
-  max-height: 298px;
+  width: 399px;
+  height: 298px;
   position: relative;
-}
-
-.preloader {
-  position: absolute;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.preloader-template {
+  position: absolute;
 }
 
 .content__card-link {
@@ -246,10 +244,13 @@ fieldset {
   text-decoration: underline;
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
 
 .content__card-link:focus-visible {
   outline: 1px solid white;
@@ -262,6 +263,7 @@ fieldset {
 }
 
 .content__video-card-title {
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -296,6 +298,7 @@ fieldset {
   background-color: transparent;
   color: white;
   font-size: 18px;
+  font-weight: 700;
   font-family: inherit;
   outline: none;
   white-space: nowrap;
