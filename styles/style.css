@@ -298,6 +298,7 @@ fieldset {
   font-size: 18px;
   font-family: inherit;
   outline: none;
+  white-space: nowrap;
 }
 
 .button:hover {
